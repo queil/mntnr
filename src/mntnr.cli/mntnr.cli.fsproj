@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>mntnr</AssemblyName>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <PackAsTool>true</PackAsTool>
+    <IsPackable>true</IsPackable>
+    <ToolCommandName>mntnr</ToolCommandName>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="model/Types.fs" />
+    <Compile Include="tools/Utils.fs" />
+    <Compile Include="tools/Git.fs" />
+    <Compile Include="tools/DiffHash.fs" />
+    <Compile Include="tools/Loader.fs" />
+    <Compile Include="tools/TagMatching.fs" />
+    <Compile Include="cmd/apply/Model.fs" />
+    <Compile Include="cmd/apply/Command.fs" />
+    <Compile Include="cmd/apply/Cli.fs" />
+    <Compile Include="cmd/check/Model.fs" />
+    <Compile Include="cmd/check/Command.fs" />
+    <Compile Include="cmd/check/Cli.fs" />
+    <Compile Include="Cli.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.*" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Argu" Version="6.*" />
+    <PackageReference Include="Fake.Core.Process" Version="5.*" />
+    <PackageReference Include="Queil.FSharp.FscHost" Version="0.16.0" />
+    <PackageReference Include="Queil.FsYaml" Version="3.*" />
+  </ItemGroup>
+
+</Project>
